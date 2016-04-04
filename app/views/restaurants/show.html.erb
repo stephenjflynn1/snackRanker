@@ -1,7 +1,18 @@
-<p> It's showtime bitches. </p></br>
-<p><%= @restaurant.building %></p></br>
-<p><%= @restaurant.street %></p></br>
-<p><%= @restaurant.zipcode %></p></br>
-<p><%= @restaurant.boro %></p></br>
+
+
+
+
+
+<% client = SODA::Client.new({:domain => "data.cityofnewyork.us", :app_token => ENV["jnTt0XEVnUxT9EEJBesuyuQRR"]}) %>
+<% records = [] %>
+<% records = client.get("https://data.cityofnewyork.us/resource/xx67-kt59.json", {:building => 117}) %>
+<br>
+
+<%= records.count %>
+<br>
+
+
+<u> <b>NYC Freshness Score </b> </u> <br>
+
 
 
