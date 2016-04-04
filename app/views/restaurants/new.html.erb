@@ -1,0 +1,25 @@
+
+
+
+ <img src="/snackranker.png" align = "middle" />
+
+ <p> Welcome to SnackRanker, please fill in the following fields and we'll match your restaurant. </p>
+ <p> We'll find an aggregate score from Yelp scores and city health inspection grades! </p>
+
+
+<%= form_for (@restaurant) do |f| %>
+<p> 
+  <%= f.label :building, "Building Number"%><br>
+  <%= f.text_field :building%><br>
+
+  <%= f.label :street%><br>
+  <%= f.text_field :street%><br>
+
+  <%= f.label :zipcode, "Zip Code"%><br>
+  <%= f.text_field :zipcode%><br>
+
+  <%= f.label :boro%><br>
+  <%= f.text_field :boro%><br>
+</p>
+<%= f.submit "Find Restaurant" %>
+<% end %>
